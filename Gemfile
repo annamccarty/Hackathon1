@@ -6,7 +6,7 @@ git_source(:github) do |repo_name|
 end
 # Install Devise for User
 gem 'devise'
-
+gem 'paperclip'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
 # Use postgresql as the database for Active Record

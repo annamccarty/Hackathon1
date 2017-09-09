@@ -1,8 +1,18 @@
 <%= button_to 'Log Out', destroy_user_session_path, method: :delete %>
 <h2>Welcome <%= current_user.username %> </h2>
+
 <p>this is new</p>
 <% if current_user.bio %>
     <%= link_to 'User Bio', bio_path(current_user.bio) %>
   <% else %>
-    <%= link_to 'Create bio', new_bio_path(current_user.bio) %> 
+    <%= link_to 'Create bio', new_bio_path(current_user.bio) %>
 <% end %>
+
+<p>this is the posts index</p>
+
+<%= link_to 'Create a new post', new_post_path %>
+<ul>
+  <% @posts.each do |post| %>
+    <li><%= link_to post.image_file_name, post %></li>
+  <% end %>
+</ul>

@@ -1,0 +1,13 @@
+<p> this is our form</p>
+
+<%= form_for @post do |form| %>
+
+  <p>
+    <%= form.label :image_file_name %><br>
+    <%= form.file_field :image_file_name %>
+  </p>
+
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
