@@ -13,6 +13,6 @@
 <%= link_to 'Create a new post', new_post_path %>
 <ul>
   <% @posts.each do |post| %>
-    <li><%= link_to post.image_file_name, post %></li>
+    <li><%= image_tag post.image.url(:medium) %></li>
   <% end %>
 </ul>

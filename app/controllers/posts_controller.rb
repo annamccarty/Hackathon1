@@ -49,7 +49,7 @@ class PostsController < ApplicationController
       end
 
       def post_params
-        params.require(:post).permit(:image_file_name)
+        params.require(:post).permit(:image)
       end
 
       def get_user
