@@ -1,5 +1,5 @@
-<h1>Bios#edit</h1>
-<%= form_for @bio, url: {action: "create"}, html: {class: "nifty_form"} do |f| %>
+<h1><%= current_user.username %> tell us whats changed!</h1>
+<%= form_for @bio, url: {action: "show"}, html: {class: "nifty_form"} do |f| %>
   <%= f.label :profile_image %>
   <%= f.text_field :profile_image %>
   <br />

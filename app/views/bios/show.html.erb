@@ -1,2 +1,9 @@
-<h1>Bios#show</h1>
-<p>Find me in app/views/bios/show.html.erb</p>
+<div class="ui container"
+    <h1><%= current_user.username %> Bio Page</h1>
+    <%= @bio.profile_image %><br>
+    <%= @bio.description %><br>
+
+    <%= link_to 'Edit Bio', edit_bio_path %>
+    <%= link_to 'Posts' , posts_path %>
+    <p>Find me in app/views/bios/show.html.erb</p>
+</div>

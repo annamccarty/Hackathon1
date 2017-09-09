@@ -1,4 +1,4 @@
-<h1>Bios#new</h1>
+<h1><%= current_user.username %> tell us about yourself!</h1>
 <%= form_for @bio, url: {action: "create"}, html: {class: "nifty_form"} do |f| %>
   <%= f.label :profile_image %>
   <%= f.text_field :profile_image %>

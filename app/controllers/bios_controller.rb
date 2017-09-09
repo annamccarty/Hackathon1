@@ -20,11 +20,12 @@ class BiosController < ApplicationController
   end
 
   def edit
+
   end
 
   def update
     if @bio.update(bio_params)
-      redirect_to [@user, @bio]
+      redirect_to @bio
     else
       render :edit
     end
