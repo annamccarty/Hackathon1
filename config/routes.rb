@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   root to: 'accounts#index'
-
+  resources :users do
+    resources :bios
+  end
   devise_for :users, controllers: {
    registrations: 'users/registrations'
  }
