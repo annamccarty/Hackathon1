@@ -9,7 +9,7 @@ class BiosController < ApplicationController
     @bio = @user.build_bio(bio_params)
 
     if @bio.save
-      redirect_to [@user, @bio]
+      redirect_to @bio
     else
       render :new
     end
@@ -17,11 +17,9 @@ class BiosController < ApplicationController
 
   def new
     @bio = Bio.new
-    render partial: 'form'
   end
 
   def edit
-    render partial: 'form'
   end
 
   def update
@@ -39,7 +37,7 @@ class BiosController < ApplicationController
 
   private
     def set_user
-      @user = User.find(params[:user_id])
+      @user = current_user
     end
 
     def set_bio
